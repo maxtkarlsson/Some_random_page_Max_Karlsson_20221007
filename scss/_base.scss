@@ -1,7 +1,18 @@
 /* This file contains the resets, variables, mixins and any utility classes */
 
+/* Resets */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* Variables */
+
+/* Mixins */
+@mixin FlexColCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

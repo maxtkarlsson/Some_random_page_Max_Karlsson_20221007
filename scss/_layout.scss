@@ -1,3 +1,5 @@
+@use "base" as b;
+
 /* This file contains all CSS regarding layout */
 
 /*header layout*/
@@ -10,54 +12,18 @@ header {
 
 /* welcome text layout */
 .hero {
+  @include b.FlexColCenter;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: white;
-}
-
-/* nav layout */
-nav {
-  background-color: blue;
 }
 
 /* Team layout */
 .container-team {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  &__img {
-    height: 400px;
-    width: 400px;
-    border-radius: 50%;
-  }
-
-  &__desc {
-    background-color: grey;
-  }
+  @include b.FlexColCenter;
 }
 
 /*contact layout*/
 .container-contact {
+  @include b.FlexColCenter;
   background-color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-list {
-  color: white;
-  list-style-type: none;
 }

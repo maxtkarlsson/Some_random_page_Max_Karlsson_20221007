@@ -1,10 +1,13 @@
 /* This file contains the resets, variables, mixins and any utility classes */
+/* Resets */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Variables */
+/* Mixins */
 /* This file contains all CSS regarding layout */
 /*header layout*/
 header {
@@ -16,17 +19,12 @@ header {
 
 /* welcome text layout */
 .hero {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
   color: white;
-}
-
-/* nav layout */
-nav {
-  background-color: blue;
 }
 
 /* Team layout */
@@ -37,6 +35,22 @@ nav {
   align-items: center;
 }
 
+/*contact layout*/
+.container-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+/* This file contains reusables such as buttons, navbars, cards etc. */
+/* navbar*/
+nav {
+  background-color: blue;
+}
+
+/* card */
 .card {
   display: flex;
   flex-direction: column;
@@ -52,20 +66,10 @@ nav {
   background-color: grey;
 }
 
-/*contact layout*/
-.container-contact {
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
+/* contact list */
 .contact-list {
   color: white;
   list-style-type: none;
 }
-
-/* This file contains reusables such as buttons, navbars, cards etc. */
 
 /*# sourceMappingURL=main.css.map */

@@ -1,1 +1,28 @@
+@use "base" as b;
+
 /* This file contains reusables such as buttons, navbars, cards etc. */
+
+/* navbar*/
+nav {
+  background-color: blue;
+}
+
+/* card */
+.card {
+  @include b.FlexColCenter;
+  &__img {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+  }
+
+  &__desc {
+    background-color: grey;
+  }
+}
+
+/* contact list */
+.contact-list {
+  color: white;
+  list-style-type: none;
+}
