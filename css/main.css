@@ -1,4 +1,5 @@
 /* This file contains the resets, variables, mixins and any utility classes */
+/* Variables */
 /* Resets */
 * {
   box-sizing: border-box;
@@ -6,12 +7,21 @@
   padding: 0;
 }
 
-/* Variables */
+html {
+  font-family: "Times New Roman", Times, serif;
+}
+
 /* Mixins */
+/* Mediaqueries */
 /* This file contains all CSS regarding layout */
 /*header layout*/
 header {
-  background-image: url(/assets/negative-space-black-forest-dawn.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(8, 156, 8); /* Fallback bkg-color */
+  background-image: url(../assets/negative-space-black-forest-dawn.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -24,15 +34,46 @@ header {
   justify-content: center;
   align-items: center;
   height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.hero span {
+  margin-top: 3rem;
+}
+.hero__text, .hero__text--small {
   color: white;
+  text-align: center;
+  font-size: 2.3rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+.hero__text--small {
+  font-size: 1.8rem;
+  font-weight: lighter;
 }
 
 /* Team layout */
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .container-team {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .container-team {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
 
 /*contact layout*/
@@ -41,12 +82,23 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-items: flex-start;
   background-color: black;
+}
+@media screen and (min-width: 768px) {
+  .container-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
 }
 
 /* This file contains reusables such as buttons, navbars, cards etc. */
 /* navbar*/
-nav {
+.navigation {
   background-color: blue;
 }
 
@@ -56,20 +108,74 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  width: 30em;
+}
+.card__name {
+  font-weight: bold;
+  font-size: 1.3em;
 }
 .card__img {
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
   border-radius: 50%;
+  box-shadow: 0px 0px 35px -1px grey;
 }
 .card__desc {
-  background-color: grey;
+  background-color: rgb(214, 214, 214);
+  max-width: 30em;
+  padding: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  border-radius: 6px;
+}
+.card__desc span {
+  font-size: 1.2em;
+}
+.card__desc span i {
+  transform: rotate(30deg);
+  font-size: 3em;
+  font-weight: bold;
 }
 
 /* contact list */
 .contact-list {
   color: white;
   list-style-type: none;
+  font-size: 1.7em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 25%;
+  line-height: 1.8em;
+}
+@media screen and (min-width: 768px) {
+  .contact-list {
+    margin-left: 0%;
+  }
+}
+
+/* buttons */
+.btn-icon {
+  margin: 1em;
+}
+.btn-icon__link i {
+  color: white;
+  font-size: 1.5em;
+}
+.btn-icon__link--secondary {
+  color: black;
+  font-size: 1.5em;
+}
+
+/* Headlines */
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 /*# sourceMappingURL=main.css.map */

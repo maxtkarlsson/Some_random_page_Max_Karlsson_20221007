@@ -1,5 +1,8 @@
 /* This file contains the resets, variables, mixins and any utility classes */
 
+/* Variables */
+$desktop: 768px;
+
 /* Resets */
 * {
   box-sizing: border-box;
@@ -7,7 +10,9 @@
   padding: 0;
 }
 
-/* Variables */
+html {
+  font-family: "Times New Roman", Times, serif;
+}
 
 /* Mixins */
 @mixin FlexColCenter {
@@ -15,4 +20,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@mixin FlexRowCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mediaqueries */
+@mixin for-size($size) {
+  @if $size == desktop {
+    @media screen and (min-width: $desktop) {
+      @content;
+    }
+  }
 }
