@@ -2,10 +2,95 @@
 
 /* This file contains reusables such as buttons, navbars, cards etc. */
 
-/* navbar*/
+/* navigation menu*/
+.top-nav {
+  @include b.FlexRowCenter;
+  align-items: flex-end;
+  position: relative;
+  width: 100%;
+  height: 22%;
+  @include b.for-size(desktop) {
+    background-color: hsla(360, 100%, 100%, 0.1);
+    align-items: center;
+    height: 6em;
+  }
 
-.navigation {
-  background-color: blue;
+  #menutoggle {
+    width: 100%;
+    z-index: 1;
+    display: block;
+    position: relative;
+    @include b.for-size(desktop) {
+      @include b.FlexRowCenter;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    input {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      height: 40px;
+      width: 40px;
+      cursor: pointer;
+      z-index: 2;
+      opacity: 0;
+      @include b.for-size(desktop) {
+        display: none;
+      }
+    }
+    i {
+      position: absolute;
+      right: 20px;
+      top: 11px;
+      z-index: 1;
+      font-size: 3em;
+      color: white;
+      @include b.for-size(desktop) {
+        display: none;
+      }
+    }
+  }
+}
+
+.menu {
+  list-style-type: none;
+  font-size: 1.7em;
+  text-align: center;
+  color: white;
+  padding-top: 4rem;
+  padding-bottom: 0.3em;
+  transform: translateY(-100%);
+
+  transition: transform 0.3s ease-out;
+  background-color: hsla(360, 100%, 100%, 0.1);
+  width: 100%;
+  height: 100%;
+  @include b.for-size(desktop) {
+    transform: none;
+    width: auto;
+    height: auto;
+    padding-top: 0;
+    background-color: transparent;
+    transition: none;
+  }
+
+  &__item {
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    @include b.for-size(desktop) {
+      display: inline;
+      padding-right: 1em;
+    }
+  }
+}
+
+#menutoggle input:checked ~ ul {
+  transform: none;
 }
 
 /* card */
