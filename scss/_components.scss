@@ -13,7 +13,11 @@
   @include b.FlexColCenter;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
-  width: 30em;
+
+  @include b.for-size(desktop) {
+    width: 40%;
+  }
+
   &__name {
     font-weight: bold;
     font-size: 1.3em;
@@ -30,18 +34,21 @@
 
   &__desc {
     background-color: rgb(214, 214, 214);
-    max-width: 30em;
+
     padding: 2em;
     margin-left: 2em;
     margin-right: 2em;
     border-radius: 6px;
+    @include b.for-size(desktop) {
+      max-width: 80%;
+    }
 
     span {
       font-size: 1.2em;
       i {
-        transform: rotate(30deg);
-        font-size: 3em;
+        font-size: 2.8em;
         font-weight: bold;
+        margin-right: 0.1em;
       }
     }
   }
@@ -56,6 +63,12 @@
   margin-bottom: 2em;
   margin-left: 25%;
   line-height: 1.8em;
+  &__item {
+    i {
+      margin-right: 0.5em;
+    }
+  }
+
   @include b.for-size(desktop) {
     margin-left: 0%;
   }

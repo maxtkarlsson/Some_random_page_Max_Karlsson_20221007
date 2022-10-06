@@ -44,9 +44,12 @@ header {
 
 .container-team {
   @include b.FlexColCenter;
+  width: 100%;
+
   @include b.for-size(desktop) {
     @include b.FlexRowCenter;
-    justify-content: space-evenly;
+
+    flex-wrap: wrap;
   }
 }
 

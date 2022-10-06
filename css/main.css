@@ -9,6 +9,7 @@
 
 html {
   font-family: "Times New Roman", Times, serif;
+  scroll-behavior: smooth;
 }
 
 /* Mixins */
@@ -65,6 +66,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .container-team {
@@ -72,7 +74,7 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 }
 
@@ -110,7 +112,11 @@ header {
   align-items: center;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
-  width: 30em;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    width: 40%;
+  }
 }
 .card__name {
   font-weight: bold;
@@ -126,19 +132,23 @@ header {
 }
 .card__desc {
   background-color: rgb(214, 214, 214);
-  max-width: 30em;
   padding: 2em;
   margin-left: 2em;
   margin-right: 2em;
   border-radius: 6px;
 }
+@media screen and (min-width: 768px) {
+  .card__desc {
+    max-width: 80%;
+  }
+}
 .card__desc span {
   font-size: 1.2em;
 }
 .card__desc span i {
-  transform: rotate(30deg);
-  font-size: 3em;
+  font-size: 2.8em;
   font-weight: bold;
+  margin-right: 0.1em;
 }
 
 /* contact list */
@@ -150,6 +160,9 @@ header {
   margin-bottom: 2em;
   margin-left: 25%;
   line-height: 1.8em;
+}
+.contact-list__item i {
+  margin-right: 0.5em;
 }
 @media screen and (min-width: 768px) {
   .contact-list {
