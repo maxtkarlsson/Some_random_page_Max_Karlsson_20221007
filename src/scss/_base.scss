@@ -1,4 +1,4 @@
-/* This file contains the resets, variables, mixins and any utility classes */
+/* This file contains the resets, variables and mixins  */
 
 /* Variables */
 $desktop: 768px;
@@ -30,7 +30,7 @@ html {
   align-items: center;
 }
 
-/* Mediaqueries */
+/* Mediaqueries mixins */
 @mixin for-size($size) {
   @if $size == desktop {
     @media screen and (min-width: $desktop) {

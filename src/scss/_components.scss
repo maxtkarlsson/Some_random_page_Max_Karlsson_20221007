@@ -93,7 +93,7 @@
   transform: none;
 }
 
-/* card */
+/* Team cards */
 .card {
   @include b.FlexColCenter;
   margin-top: 1.5em;
@@ -139,7 +139,7 @@
   }
 }
 
-/* contact list */
+/* Contact lists */
 .contact-list {
   color: white;
   list-style-type: none;
@@ -159,7 +159,7 @@
   }
 }
 
-/* buttons */
+/* Buttons */
 .btn-icon {
   margin: 1em;
   &__link {

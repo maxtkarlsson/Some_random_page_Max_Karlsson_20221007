@@ -1,6 +1,6 @@
 @use "base" as b;
 
-/* This file contains all CSS regarding layout */
+/* This file contains all CSS regarding basic layout */
 
 /*header layout*/
 header {
@@ -12,7 +12,7 @@ header {
   height: 100vh;
 }
 
-/* welcome text layout */
+/* hero content layout */
 .hero {
   @include b.FlexColCenter;
   height: 100%;
@@ -37,7 +37,7 @@ header {
   }
 }
 
-/* Team layout */
+/* About layout */
 #about {
   @include b.FlexColCenter;
 }
@@ -53,7 +53,7 @@ header {
   }
 }
 
-/*contact layout*/
+/*Contact layout*/
 .container-contact {
   @include b.FlexColCenter;
   align-items: flex-start;
